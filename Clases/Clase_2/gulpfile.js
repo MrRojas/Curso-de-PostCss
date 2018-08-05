@@ -2,8 +2,8 @@
 var gulp = require('gulp')
 // Invocar Postcss con gulp 
 var postcss = require('gulp-postcss')
-//Invocar browserSync
 
+//Invocar browserSync
 var browserSync = require('browser-sync')
 
 // servidor de Desarrollo con Gulp

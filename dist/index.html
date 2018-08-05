@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html> 
   <head>
     <title>Invie - tus mejores guitarras!!</title>
     <meta charset="utf-8"/>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/invie.css"/>
+    
+    <link rel="stylesheet" href="css/main.css"/>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
     <section id="portada" class="InvieHero"> <!-- portada -->
       <header id="header" class="InvieHero-header u-wrapper"> <!-- header -->
         <figure class="InvieHero-logo"> <!-- logotipo -->
-          <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo"/>
+          <img src="images/invie.png"  width="186" height="60" alt="Invie logotipo"/>
         </figure>
         <span class="InvieHero-btn icon-menu" id="burguer-button"></span>
         <nav class="InvieHero-navbar" id="menu"> <!-- menu -->
@@ -40,7 +41,7 @@
 
         <article class="u-scrollContainer-itemContainer"> <!-- guitarra 1 -->
           <div class="u-scrollContainer-itemContent">
-            <img class="InvieGuitars-item-img" data-src="images/invie-acustica.png|images/invie-acustica2x.png"  alt="Guitarra Invie Acustica" width="350"/>
+            <img class="InvieGuitars-item-img" src="images/invie-acustica.png"  alt="Guitarra Invie Acustica" width="350"/>
             <div class="InvieGuitars-item-container">
               <h3 class="InvieGuitars-item-title">Invie Acustica</h3>
               <ol class="InvieGuitars-item-list">
@@ -54,7 +55,7 @@
 
         <article class="u-scrollContainer-itemContainer"> <!-- guitarra 2 -->
           <div class="u-scrollContainer-itemContent">
-            <img class="InvieGuitars-item-img" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra Invie Classic" width="350"/>
+            <img class="InvieGuitars-item-img" src="images/invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
             <div class="InvieGuitars-item-container">
               <h3 class="InvieGuitars-item-title">Invie Classic</h3>
               <ol class="InvieGuitars-item-list">
@@ -80,7 +81,7 @@
     <footer class="InvieFooter">
       <div class="InvieFooter-container u-wrapper">
         <div class="InvieFooter-contact">
-          <img class="InvieFooter-logo" data-src="images/invie-white.png|images/invie-white2x.png" alt="logotipo blanco"/>
+          <img class="InvieFooter-logo" src="images/invie-white.png" alt="logotipo blanco"/>
           <a class="InvieFooter-link" href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
           <a class="InvieFooter-link" href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
         </div>
@@ -122,7 +123,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+   
     <script>
       var consulta = window.matchMedia('(max-width: 500px)');
       consulta.addListener(mediaQuery);

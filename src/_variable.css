@@ -1,0 +1,33 @@
+:root {
+
+	--bg-body : #fafafa;
+	--bg-header: #466173;
+	--bg-footer: #273d47;
+
+	--btn-degradado : #273d47;
+	--btn-deg-inicio : color( var(--btn-degradado) blackness(70%) );
+	--btn-deg-fin : color( var(--btn-degradado) lightness(+30%) hue(1%) );
+
+	--size_fuente : 18px; 
+}
+
+@custom-media --telefono (max-width: 500px);
+@custom-media --tablet (max-width: 650px); 
+@custom-media --escritorio (max-width: 800px);
+@custom-media  --retina (-webkit-min-device-pixel-ratio: 2);
+
+
+
+/*mixin*/
+
+@define-mixin boton $color, $background, $degradadoI, $degradadoF {
+	color: $(color);
+	border-radius: 12px;
+	border: none; 
+	padding: 7px 12px; 
+	cursor: pointer;
+	font-size: var(--fontSize); 
+	text-decoration: none; 
+	background: $(background);
+	background: linear-gradient(to left , $(degradadoI) , $(degradadoF)); 
+}

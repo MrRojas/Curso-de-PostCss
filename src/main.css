@@ -1,0 +1,62 @@
+@import './_variable.css';
+
+
+body{
+	position: 0;
+	padding: 0;
+	margin: 0;
+	background: var(--bg-body);
+}
+.InvieHero{
+
+	padding: 20px; 
+	height: 500px; 
+	background: url('../images/background.png') var(--bg-header);
+
+	@media (--retina) {
+		background: black;
+	}
+
+	&-header{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+	}
+
+	&-logo{
+		transition: .3s;
+		&:hover{
+			filter: blur(4px);
+		
+		}
+		
+
+	}
+
+	&-copy{
+
+
+		&-title {
+			font-size: 4em;
+		}
+		&-btn{
+
+			@mixin boton var(--bg-body) , var(--btn-degradado)  , var(--btn-deg-inicio), var(--btn-deg-fin); 
+	
+		}
+	}
+
+
+}
+
+.InvieFooter{
+
+	background: var(--bg-footer);
+
+	&-form{
+		&-btn{
+			@mixin boton var(--bg-body) , var(--btn-degradado)  , var(--btn-deg-inicio), var(--btn-deg-fin); 
+		}
+	}
+}

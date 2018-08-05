@@ -2,8 +2,20 @@
 var gulp = require('gulp')
 // Invocar Postcss con gulp 
 var postcss = require('gulp-postcss')
-//Invocar browserSync
 
+// Plugins de PostCSS 
+var nested = require('postcss-nested')
+
+var mixin = require('postcss-mixins')
+var importe = require('postcss-import')
+
+var cssw = require('csswring')
+
+var ruck = require('css-mqpacker')
+
+var cssnext = require('postcss-cssnext')
+
+//Invocar browserSync
 var browserSync = require('browser-sync')
 
 // servidor de Desarrollo con Gulp
@@ -26,15 +38,16 @@ gulp.task( 'serve' , () => {
 gulp.task('css' , () =>{
 
 	// array con los plugins de postcss que debemos instalar con anterioridad 
-	var plugins = []
+	var plugins = [  importe()  , mixin(),  nested()  , cssnext() , ruck() , cssw()  ]
+	
 
 	// primero lee todo los que se pasa en src, en este caso todo lo que sea .css  
-	return gulp.src('./src/*.css')
+	return gulp.src('./src/main.css')
 	// luego asignamos pipe (tuberias) para que se mueve en el directorio con la ayuda de node_js 
 	// al cual al primero le asignamos postcss pasando el array de plugins
-	.pipe(postcss(plugins))
+	.pipe(postcss( plugins ))
 	// una segunda tuberia en el cual le decimos a gulp donde dejar los archivos procesados 
-	.pipe(gulp.dest('./dist/css'))
+	.pipe(gulp.dest('./dist/css/'))
 	// y asignamos un ultimo pipe donde le decimos a browserSync que recargue 
 	.pipe(browserSync.stream())
 
@@ -56,4 +69,4 @@ gulp.task('watch' , () => {
 
 // Una tarea que llama al arreglo de tareas a ejecutar 
 
-gulp.task('default' , ['css' , 'serve'] )
+gulp.task('default' , ['watch' , 'serve'] )
